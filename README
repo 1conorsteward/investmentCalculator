@@ -1,0 +1,87 @@
+Programmer: Conor Steward
+Contact: 1conorsteward@gmail.com
+Date: 10/8/24
+Version: 2.0
+
+The Investment Calculator is a modular, extensible program that simulates multiple investment strategies based on user input. It helps users visualize how their investments grow over time under different conditions, including traditional investment growth, a Dividend Reinvestment Plan (DRP), and a High-Risk vs Low-Risk portfolio comparison.
+
+The application takes inputs such as initial investment, interest rate, monthly deposit, dividend yield, stock price growth rate, and investment duration. It generates detailed reports for each strategy, offering a comparison of risk profiles and the power of compounding through reinvested dividends. This project demonstrates the importance of risk tolerance and compounding returns in long-term investments.
+
+Program Capabilities
+1. Regular Investment Strategy
+Description: Calculates interest earned based on initial investment, monthly deposits, annual interest rate, and investment duration. The program generates year-wise reports for both scenarios: with and without monthly deposits.
+Runtime Complexity: O(n), where n is the number of years.
+Report Output: Displays year-end balances and earned interest for both cases (with and without monthly deposits).
+2. Dividend Reinvestment Plan (DRP)
+Description: Demonstrates how dividends are reinvested to buy additional shares over time, showing how compounding affects the growth of an investment.
+Runtime Complexity: O(n), where n is the number of years.
+Report Output: Displays the total shares purchased, stock price growth, and investment value for each year.
+3. High-Risk vs Low-Risk Strategy Comparison
+Description: Compares the performance of a high-risk investment portfolio against a low-risk one, illustrating the outcomes of different risk profiles.
+Runtime Complexity: O(n), where n is the number of years.
+Report Output: Displays yearly balances for both high-risk and low-risk strategies, helping users understand risk vs. reward trade-offs.
+4. Detailed Reports
+Description: Generates clear and concise reports for each strategy, displaying year-end balances, earned interest, shares purchased, and portfolio growth.
+Purpose: These reports are designed to give users insights into how their investments evolve over time under different strategies and market conditions.
+Project Purpose
+The goal of this project is to create a flexible, modular application that allows users to simulate various investment strategies and visualize how these strategies impact the long-term growth of their portfolio. By incorporating dividend reinvestment and risk profile comparisons, users can better understand the trade-offs between risk and return and the power of compounding dividends over time.
+
+Input Parameters
+Initial Investment Amount: The starting amount for the investment.
+Monthly Deposit: Optional for regular investments, representing additional monthly contributions.
+Annual Interest Rate (%): The expected annual return for regular investments.
+High-Risk Rate (%): Used for risk comparison.
+Low-Risk Rate (%): Used for risk comparison.
+Dividend Yield (%): The percentage yield paid as dividends in DRP.
+Stock Price Growth Rate (%): Expected growth of stock prices in DRP.
+Number of Years: The duration of the investment period.
+Runtime Complexities
+Regular Investment Calculation: O(n), where n is the number of years. It iterates through each year to calculate the total balance with and without monthly deposits.
+Dividend Reinvestment Plan Calculation: O(n), where n is the number of years. Each year, dividends are reinvested, and the investment value is updated based on stock price growth.
+High-Risk vs Low-Risk Comparison: O(n), where n is the number of years. The balances for both strategies are calculated yearly and compared.
+Problem Solved
+This application helps users:
+
+Visualize how their investments grow over time using different strategies.
+Understand the importance of compounding interest and reinvested dividends.
+Compare different levels of risk (high-risk vs low-risk) and their potential outcomes.
+By allowing users to input real-world financial variables, the program generates personalized reports that show balance growth, interest earned, and dividends reinvested over time.
+
+Modular Code Structure
+The code is structured into separate modules, each handling distinct responsibilities:
+
+InvestmentCalculator: Calculates investment growth for different strategies.
+InvestmentReport: Generates reports for the results of those calculations.
+This separation of concerns makes the codebase clean, readable, and maintainable.
+
+Extensible Design
+The program is designed with scalability in mind. New investment strategies can be easily integrated by extending the InvestmentCalculator class or adding new methods without affecting existing functionality.
+
+Areas for Improvement
+Input Validation
+Currently, the program does not validate inputs. Negative numbers, non-numeric characters, or other invalid inputs may cause errors. Adding input validation would improve the user experience and prevent incorrect data from being processed.
+
+Challenges Faced and Solutions
+Modularizing the Code:
+
+Challenge: Deciding how to split the functionality between classes and files.
+Solution: The bulk of the logic was placed in .cpp files, while .h files were kept cleaner, containing only declarations.
+Adding New Features Without Breaking Existing Functionality:
+
+Challenge: Introducing new features (e.g., DRP, High-Risk vs Low-Risk strategies) while ensuring existing calculations for regular investments remained intact.
+Solution: The InvestmentCalculator class was extended with new methods to handle each strategy separately.
+Seeking External Resources:
+
+Solution: GitHub and developer communities were leveraged for advice and best practices on object-oriented design and financial calculations.
+Transferable Skills
+Modular Programming
+This project reinforced the importance of structuring code modularly, which is crucial for scalability and maintainability in larger applications.
+
+Object-Oriented Design
+The project applied key object-oriented principles, such as encapsulation and inheritance, to make the program adaptable and flexible.
+
+Financial Algorithms
+Implementing DRP and risk strategy comparisons deepened the understanding of financial calculations, which is valuable for any project involving financial analysis or simulations.
+
+Conclusion
+This project showcases a comprehensive and flexible tool for analyzing various investment strategies. By supporting regular investments and more advanced strategies such as Dividend Reinvestment Plans and Risk Comparison, the program serves as both an educational and practical tool for users seeking to optimize their financial investments.
